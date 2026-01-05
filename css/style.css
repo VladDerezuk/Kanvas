@@ -262,3 +262,17 @@ hr {
     font-family: "Open Sans";
     text-align: center;
 }
+.sio {
+    display: none;
+}
+
+.sio.show {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.sio.show .drugii {
+    display: flex;
+    gap: 12px;
+}

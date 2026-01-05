@@ -4,6 +4,8 @@ const visota = document.getElementById("ind");
 const kartina = document.querySelector(".kartina");
 const dodatokBtn = document.getElementById("int");
 const sizeButtons = document.querySelectorAll(".rozmir");
+const customSizeBtn = document.getElementById("btn5");
+const customSizeBlock = document.querySelector(".sio.persh");
 const dobodn = document.getElementById("checkod");
 const dobotwo = document.getElementById("checkdw");
 const dobothree = document.getElementById("checktr");
@@ -46,6 +48,7 @@ function limitSize(w, h) {
 Object.entries(buttons).forEach(([id, data]) => {
     const btn = document.getElementById(id);
     btn.addEventListener("click", () => {
+        customSizeBlock.classList.remove("show");
         const { w, h } = limitSize(data.w, data.h);
         shirina.value = w;
         visota.value = h;
@@ -58,11 +61,21 @@ Object.entries(buttons).forEach(([id, data]) => {
         upPric();
     });
 });
+customSizeBtn.addEventListener("click", () => {
+    customSizeBlock.classList.add("show");
+    resetActiveButtons();
+    shirina.value = "";
+    visota.value = "";
+    stanp = 0;
+    allp = 0;
+    calculated = false;
+    upPric();
+});
 dodatokBtn.addEventListener("click", () => {
     let w = Number(shirina.value);
     let h = Number(visota.value);
     if (!w || !h) {
-        alert("введи і то і то");
+        alert("Введи ширину і висоту");
         return;
     }
     const limited = limitSize(w, h);
@@ -70,7 +83,6 @@ dodatokBtn.addEventListener("click", () => {
     h = limited.h;
     shirina.value = w;
     visota.value = h;
-    resetActiveButtons();
     stanp = Math.round(w * h * 0.04);
     calculated = true;
     resKanv(w, h);

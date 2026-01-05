@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kanvas</title>
+</head>
+<body>
+<header>
+    <nav class="justify-between align-items">
+        <div class="logo align-items">
+            <a href="index.html"><img src="kanvas.png"></a>
+        </div>
+        <div class="align-items">
+            <div class="sega align-items">
+                <p><a href="#" class="ashka">Галерея</a></p>
+                <p><a href="#" class="ashka">Про нас</a></p>
+                <p class="psh"><a href="#" class="zelenbuc">замовити дзвінок</a></p>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="zlozhno">
+        <div class="zlozhnocras">
+            <img class="stend" src="molbert.png">
+            <div class="kartina"></div>
+        </div>
+        <div class="zlozhnoco">
+            <div class="vids"></div>
+            <nav class="cntr">
+                <form method="post" action="index.html">
+                    <h2 class="h2-control">Виберіть розмір</h2>
+                    <div class="knopki">
+                        <button type="button" class="rozmir" id="btno">30х30</button>
+                        <button type="button" class="rozmir" id="btnd">30х90</button>
+                        <button type="button" class="rozmir" id="btnt">90х120</button>
+                        <button type="button" class="rozmir" id="btnc">90х150</button>
+                        <button type="button" class="vibir" id="btn5">задати розмір</button>
+                    </div>
+                    <div class="sio persh">
+                        <div class="sio drugii">
+                            <div>
+                                <p class="texxt">ширина</p>
+                                <input type="text" class="in" id="ino">
+                            </div>
+                            <div class="slos">
+                                <p class="texxt">висота</p>
+                                <input type="text" class="in" id="ind">
+                            </div>
+                        </div>
+                        <p class="pas">
+                            <button type="button" class="pidrahuv" id="int">підрахувати</button>
+                        </p>
+                    </div>
+                    <hr>
+                    <h2 class="h2-control kl">Додаткові опції</h2>
+                    <div>
+                        <div class="plusi">
+                            <div class="align-items gup">
+                                <input type="checkbox" class="check" id="checkod">
+                                <p class="intext">дорожче полотно</p>
+                            </div>
+                            <p class="grosh">+ 35 грн</p>
+                        </div>
+                        <div class="plusi">
+                            <div class="align-items gup">
+                                <input type="checkbox" class="check" id="checkdw">
+                                <p class="intext">з рамкою</p>
+                            </div>
+                            <p class="grosh">+ 10 грн</p>
+                        </div>
+                        <div class="plusi">
+                            <div class="align-items gup">
+                                <input type="checkbox" class="check" id="checktr">
+                                <p class="intext">з доставкою (Нова Пошта)</p>
+                            </div>
+
+                            <p class="grosh">+ 40 грн</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="justify-between">
+                        <button type="button" class="submit" id="nice">придбати</button>
+                        <div class="align-items gritxr">
+                            <p class="alldng">Загальна сума:</p>
+                            <div class="flex">
+                                <p class="grivnu grn" id="idk">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </nav>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</main>
+<footer class="footer">
+    <p class="footer-copy">© Kanvas. Всі права захищені</p>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

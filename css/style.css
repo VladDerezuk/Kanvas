@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+.align-items {
+    display: flex;
+    align-items: center;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #fff;
+    padding: 16px 60px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+}
+
+nav {
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.sega p {
+    margin-left: 40px;
+}
+
+.ashka {
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #4c7792;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+.ashka:hover{
+    color: #3794ce;
+    transition: all 1s ease;
+}
+
+.zelenbuc {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #56c107;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Open Sans";
+    text-align: center;
+}
+
+.zelenbuc:hover{
+    background-color: #6be80f;
+    transition: all 1s ease;
+}
+
+.zlozhno {
+    background-color: #f2f9fb;
+    display: flex;
+    gap: 100px;
+}
+
+.zlozhnocras {
+    background: linear-gradient(180deg, #d8f1f6 0%, #c6edf3 100%);
+    padding: 0px 260px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.stend {
+    padding-top: 50px;
+    max-height: 750px;
+}
+
+.kartina {
+    background: #fff;
+    position: absolute;
+    top: 157px;
+    border-radius: 2px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+.vids{
+    padding-bottom: 130px;
+}
+
+.cntr {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.h2-control {
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.knopki {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rozmir {
+    border: 1px solid #4c7792;
+    background: #fff;
+    color: #4c7792;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.rozmir:hover {
+    background: #eaf4fb;
+}
+
+.vibir {
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    color: #4c7792;
+    background: #eaf4fb;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.texxt {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.in {
+    width: 90px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    padding: 0 10px;
+}
+
+.persh {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.drugii {
+    display: flex;
+    gap: 12px;
+}
+
+.drugii > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.pidrahuv { 
+    background: #eaf4fb; 
+    border: none; color: #1f6fb2; 
+    padding: 8px 16px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    margin-top: 18px; 
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 15px 0;
+}
+
+.plusi {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+.intext {
+    font-size: 13px;
+    color: #4c7792;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
+.grosh {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.check {
+    margin-right: 10px;
+}
+
+
+.submit {
+    background: #5cc400;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #52b000;
+}
+
+.gritxr {
+    gap: 8px;
+}
+
+.alldng {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.grivnu {
+    font-size: 26px;
+    font-weight: 700;
+    color: #5cc400;
+}
+
+.grn::after {
+    content: " грн";
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+
+.footer {
+    background-color: #333333;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #d6edfb;
+    font-weight: 500;
+    font-family: "Open Sans";
+    text-align: center;
+}

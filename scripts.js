@@ -9,8 +9,9 @@ const dobotwo = document.getElementById("checkdw");
 const dobothree = document.getElementById("checktr");
 let stanp = 0;
 let allp = 0;
-const maxw = 420;
-const maxh = 420;
+let calculated = false;
+const maxw = 500;
+const maxh = 500;
 const buttons = {
     btno: { w: 30, h: 30, price: 100 },
     btnd: { w: 30, h: 90, price: 150 },
@@ -18,14 +19,12 @@ const buttons = {
     btnc: { w: 90, h: 150, price: 280 }
 };
 function upPric() {
-    cina.textContent = stanp + allp;
+    const total = stanp + allp;
+    cina.textContent = total > 0 ? total : "—";
 }
 function resKanv(w, h) {
     if (!w || !h) return;
-    const scale = Math.min(
-        maxw / w,
-        maxh / h
-    );
+    const scale = Math.min(maxw / w, maxh / h);
     kartina.style.width = w * scale + "px";
     kartina.style.height = h * scale + "px";
 }
@@ -38,34 +37,49 @@ function recalcOptions() {
     if (dobotwo.checked) allp += 10;
     if (dobothree.checked) allp += 40;
 }
+function limitSize(w, h) {
+    return {
+        w: Math.min(w, maxw),
+        h: Math.min(h, maxh)
+    };
+}
 Object.entries(buttons).forEach(([id, data]) => {
     const btn = document.getElementById(id);
     btn.addEventListener("click", () => {
-        shirina.value = data.w;
-        visota.value = data.h;
+        const { w, h } = limitSize(data.w, data.h);
+        shirina.value = w;
+        visota.value = h;
         stanp = data.price;
+        calculated = true;
         resetActiveButtons();
         btn.classList.add("cina");
-        resKanv(data.w, data.h);
+        resKanv(w, h);
         recalcOptions();
         upPric();
     });
 });
 dodatokBtn.addEventListener("click", () => {
-    const w = Number(shirina.value);
-    const h = Number(visota.value);
+    let w = Number(shirina.value);
+    let h = Number(visota.value);
     if (!w || !h) {
         alert("введи і то і то");
         return;
     }
+    const limited = limitSize(w, h);
+    w = limited.w;
+    h = limited.h;
+    shirina.value = w;
+    visota.value = h;
     resetActiveButtons();
     stanp = Math.round(w * h * 0.04);
+    calculated = true;
     resKanv(w, h);
     recalcOptions();
-    updateupPricPrice();
+    upPric();
 });
 [dobodn, dobotwo, dobothree].forEach(box => {
     box.addEventListener("change", () => {
+        if (!calculated) return;
         recalcOptions();
         upPric();
     });
